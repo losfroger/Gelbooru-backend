@@ -36,6 +36,7 @@ export interface GelbooruPost {
   has_children_bool: boolean,
   is_video: boolean,
   is_3d: boolean,
+  is_irl: boolean,
 }
 
 export interface GelbooruTag {

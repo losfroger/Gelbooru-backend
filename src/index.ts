@@ -67,6 +67,7 @@ app.get('/post', async (req, res) => {
 
       post.is_video = post.tags_array.some((tag) => videoTags.includes(tag))
       post.is_3d = post.tags_array.includes('3d')
+      post.is_irl = post.tags_array.includes('photo_(medium)')
     })
 
     res.send(resGel.data)
