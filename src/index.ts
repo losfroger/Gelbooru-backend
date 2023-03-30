@@ -92,24 +92,25 @@ app.get('/tag', async (req, res) => {
       switch (tag.type) {
         case 0:
           tag.type_string = 'general'
-          break;
+          break
         case 1:
           tag.type_string = 'artist'
-          break;
+          break
         case 3:
           tag.type_string = 'copyright'
           break
         case 4:
           tag.type_string = 'character'
-          break;
+          break
         case 5:
           tag.type_string = 'metadata'
+          break
         case 6:
           tag.type_string = 'deprecated'
-
+          break
         default:
           tag.type_string = 'not identified'
-          break;
+          break
       }
 
 
