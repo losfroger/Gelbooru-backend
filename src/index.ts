@@ -30,7 +30,6 @@ app.post('/login', (req, res) => {
 
 app.use((req, res, next) => {
   if (req.headers.api_key && req.headers.user_id) {
-    console.log('middleware!')
     next()
     return
   }
