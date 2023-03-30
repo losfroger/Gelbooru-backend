@@ -38,6 +38,7 @@ app.use((req, res, next) => {
   res.status(StatusCodes.BAD_REQUEST).send('No api key or user id found')
 })
 
+const videoTags = ['animated', 'video']
 app.get('/post', async (req, res) => {
   try {
     const resGel = await axios_gelbooru.get('', {
@@ -63,6 +64,9 @@ app.get('/post', async (req, res) => {
       post.has_note_bool = post.has_notes === 'true'
       post.has_comments_bool = post.has_comments === 'true'
       post.has_children_bool = post.has_children === 'true'
+
+      post.is_video = post.tags_array.some((tag) => videoTags.includes(tag))
+      post.is_3d = post.tags_array.includes('3d')
     })
 
     res.send(resGel.data)

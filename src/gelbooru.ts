@@ -34,6 +34,8 @@ export interface GelbooruPost {
   post_locked: number,
   has_children: string,
   has_children_bool: boolean,
+  is_video: boolean,
+  is_3d: boolean,
 }
 
 export interface GelbooruTag {
@@ -43,4 +45,10 @@ export interface GelbooruTag {
   type: number,
   type_string: string,
   ambiguous: number,
+}
+
+
+export interface GelbooruUser {
+  owner: string,
+  creator_id: number,
 }
