@@ -61,7 +61,7 @@ app.get('/post', async (req, res) => {
       post.source_array = post.source.split('|').map((src) => src.trim())
 
       post.has_note_bool = post.has_notes === 'true'
-      post.has_comments_bool = post.has_notes === 'true'
+      post.has_comments_bool = post.has_comments === 'true'
       post.has_children_bool = post.has_children === 'true'
     })
 
