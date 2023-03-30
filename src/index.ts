@@ -83,6 +83,7 @@ app.get('/tag', async (req, res) => {
         api_key: req.headers.api_key,
         user_id: req.headers.user_id,
         name_pattern: req.query.name_pattern,
+        name: req.query.name,
         orderby: req.query.orderby ?? 'count'
       }
     })
