@@ -4,6 +4,7 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
+    "test": "nodemon --delay 500ms ./src/index.ts",
     "dev": "ts-node src/index.ts",
     "start": "ts-node dist/index.js",
     "build": "tsc -p ."
