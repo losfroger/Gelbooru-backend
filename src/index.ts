@@ -17,7 +17,7 @@ const app = express()
 app.use(cors())
 
 const port = process.env.PORT || 5000
-const base_gelbooru_url = process.env.BASE_URL
+const base_gelbooru_url = 'https://gelbooru.com/index.php'
 
 const axios_gelbooru = axios.create({
   baseURL: base_gelbooru_url
