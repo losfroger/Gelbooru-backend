@@ -46,7 +46,7 @@ app.get('/post', async (req, res) => {
         q: 'index',
         s: 'post',
         json: 1,
-        limit: 25,
+        limit: req.query.limit ?? 25,
         api_key: req.headers.api_key,
         user_id: req.headers.user_id,
         pid: req.query.pid,
