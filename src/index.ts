@@ -54,6 +54,11 @@ app.get('/post', async (req, res) => {
       }
     })
 
+    if (!('post' in resGel.data)) {
+      res.status(StatusCodes.NOT_FOUND).send(ReasonPhrases.NOT_FOUND)
+      return
+    }
+
     resGel.data.post.forEach((post: GelbooruPost) => {
       post.created_at_date = new Date(post.created_at)
 
