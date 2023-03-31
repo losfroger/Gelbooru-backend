@@ -77,6 +77,7 @@ app.get('/post', async (req, res) => {
 
     res.send(resGel.data)
   } catch (error) {
+    console.error(error)
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(ReasonPhrases.INTERNAL_SERVER_ERROR)
   }
 })
@@ -130,6 +131,7 @@ app.get('/tag', async (req, res) => {
 
     res.send(resGel.data)
   } catch (error) {
+    console.error(error)
     res.status(StatusCodes.INTERNAL_SERVER_ERROR).send(ReasonPhrases.INTERNAL_SERVER_ERROR)
   }
 })
